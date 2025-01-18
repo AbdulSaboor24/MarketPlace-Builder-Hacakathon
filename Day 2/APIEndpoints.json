@@ -1,0 +1,70 @@
+{
+  "endpoints": [
+    {
+      "endpoint": "/products",
+      "method": "GET",
+      "description": "Fetch all products",
+      "requestPayload": null,
+      "responseExample": {
+        "id": 1,
+        "name": "Kurta",
+        "price": 2500
+      }
+    },
+    {
+      "endpoint": "/products/:id",
+      "method": "GET",
+      "description": "Fetch product details",
+      "requestPayload": null,
+      "responseExample": {
+        "id": 1,
+        "name": "Kurta",
+        "price": 2500,
+        "stock": 10
+      }
+    },
+    {
+      "endpoint": "/orders",
+      "method": "POST",
+      "description": "Submit a new order",
+      "requestPayload": {
+        "customer": "Ali",
+        "items": [
+          {
+            "id": 1,
+            "name": "Kurta",
+            "quantity": 2
+          }
+        ],
+        "total": 5000
+      },
+      "responseExample": {
+        "status": "success",
+        "orderId": 123
+      }
+    },
+    {
+      "endpoint": "/shipment/:id",
+      "method": "GET",
+      "description": "Fetch order shipment status",
+      "requestPayload": null,
+      "responseExample": {
+        "status": "in transit",
+        "expectedDelivery": "2025-01-20"
+      }
+    },
+    {
+      "endpoint": "/payment/process",
+      "method": "POST",
+      "description": "Process a payment",
+      "requestPayload": {
+        "orderId": 123,
+        "paymentMethod": "Card"
+      },
+      "responseExample": {
+        "status": "paid",
+        "transactionId": "txn_1234"
+      }
+    }
+  ]
+}
