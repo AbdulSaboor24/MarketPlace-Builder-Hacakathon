@@ -12,7 +12,7 @@ export default function Home() {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("/api/products");
+        const res = await fetch("https://market-place-builder-hacakathon.vercel.app/api/products");
         const data = await res.json();
         const arrivals = data.filter((product: Product) => product.isNew).slice(0, 4);
         setNewArrivals(arrivals);
