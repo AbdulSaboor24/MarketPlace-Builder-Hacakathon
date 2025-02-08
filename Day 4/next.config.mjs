@@ -3,11 +3,10 @@ const nextConfig = {
     images: {
         domains: ['cdn.sanity.io']
     },
+    reactStrictMode: true,
     experimental: {
-        appDir: true,
-      },
-      reactStrictMode: true,
-      output: "standalone",
+        serverActions: true, // Enable server actions (optional)
+    },
 };
 
 export default nextConfig;

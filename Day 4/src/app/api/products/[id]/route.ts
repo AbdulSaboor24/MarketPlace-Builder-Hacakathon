@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import client from "../../../../../sanityClient.js";
 
+export const dynamic = "force-dynamic";
+
 export async function GET(req: Request, { params }: { params: { id: string } }) {
   const { id } = params;
 
