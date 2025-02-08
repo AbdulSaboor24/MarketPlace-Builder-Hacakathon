@@ -1,4 +1,4 @@
-import { NextResponse } from "next/server.js";
+import { NextResponse } from "next/server";
 import client from "../../../../sanityClient.js";
 
 export async function GET() {
