@@ -1,11 +1,10 @@
 import { createClient } from "@sanity/client"
 import dotenv from "dotenv";
 
-dotenv.config({ path: `.env.local` });
+dotenv.config({ path: '.env.local' });
 
 const client = createClient({
-  // projectId: process.env.NEXT_SANITY_PROJECTID,
-  projectId: "xg4cf9bm",
+  projectId: process.env.NEXT_SANITY_PROJECTID,
   dataset: "production",
   useCdn: false,
   apiVersion: "2021-10-21",
